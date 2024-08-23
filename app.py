@@ -1,5 +1,6 @@
 # Import the Flask class, Render_template for escaping all the html code, 
-from flask import Flask, render_template, request, jsonify 
+from flask import Flask, render_template, request, jsonify
+from main import get_ai_response
 from response import get_response
 
 # Create an instance of the class Flask
@@ -22,6 +23,3 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-### Run the app : python -m flask or flask flask --app hello run (for a file named hello.py)
-## Good for testing not for deployment
