@@ -1,7 +1,0 @@
-openai
-pymongo
-python-dotenv
-langchain-openai
-langchain-community
-flask
-fastapi
