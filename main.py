@@ -16,27 +16,7 @@ def get_ai_response(user_message):
         return (f"{response['output']}")
     except Exception as e:
         return (f"Sorry, I encountered an error: {e}")
-
-    
-
-def main():
-    print("Bot: Hello! How can I assist you today?")
-    
-    while True:
-        user_message = input("You: ").strip().lower()
         
-        chat_history = memory.buffer_as_messages
-        
-        inputs = {
-            "message": user_message,
-            "chat_history" : chat_history,
-        }
-        
-        try:
-            response = db_agent_executor.invoke(inputs)
-            print(f"Bot: {response['output']}")
-        except Exception as e:
-            print(f"Bot: Sorry, I encountered an error: {e}")
 
 if __name__ == "__main__":
     main()
