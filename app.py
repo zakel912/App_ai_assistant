@@ -1,6 +1,5 @@
 # Import the Flask class, Render_template for escaping all the html code, 
 from flask import Flask, render_template, request, jsonify
-from main import get_ai_response
 from response import get_response
 
 # Create an instance of the class Flask
