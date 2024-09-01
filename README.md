@@ -29,6 +29,9 @@ L'application est notamment développer pour construire une interface utilisateu
 
 # Structure du Projet
 app.py: Le point d'entrée principal de l'application Flask.
+
 main.py: Contient une logique simpliste d'un chatbot, pour simuler ses réponses et les utiliser sur l'interface.
+
 templates/: Dossier contenant les fichiers HTML (si une interface web est utilisée).
+
 static/: Dossier contenant les fichiers statiques comme CSS, JavaScript, et images.
