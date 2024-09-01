@@ -3,38 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Assistant</title>
+    <title>IDEMIA AI Assistant</title>
+
+    <!-- Links to external CSS files for styling -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='loading_dots.css') }}">
 </head>
 <body>
-
-<div class="chatbox">
-    <div class="chatbox__support">
-        <div class="chatbox__header">
-            <div class="chatbox__image--header">
-                <img src="{{ url_for('static', filename='images/chatbot.png') }}" alt="image" width="50px" height="50px">
+    <!-- Displays the IDEMIA logo at the top of the page -->
+    <img src="{{ url_for('static', filename='images/IDEMIA_Group_Logo_CMYK.jpg') }}" style="width:100%; height:auto">
+    
+    <!-- Main chatbox section -->
+    <section class="chatbox">
+        <div class="chatbox__support">
+            <!-- Chatbox header, including the chatbot image and heading -->
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="{{ url_for('static', filename='images/chatbot.png') }}" alt="image" width="50px" height="50px">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">IDEMIA Assistant</h4>
+                    <p class="chatbox__description--header">Here to assist you!</p>
+                </div>
             </div>
-            <div class="chatbox__content--header">
-                <h4 class="chatbox__heading--header">IDEMIA Assistant</h4>
-                <p class="chatbox__description--header">Here to assist you!</p>
+
+            <!-- Area where chat messages will appear -->
+            <div class="chatbox__messages">
+                <!-- Messages will be dynamically inserted here -->
+            </div>
+            
+            <!-- Loading dots animation displayed when the assistant is processing -->
+            <div class="loading-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Footer section with input field and send button -->
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write your message...">
+                <button class="chatbox__send--footer send__button" title="Send message"><img src="{{ url_for('static', filename='images/send.png') }}"></button>
             </div>
         </div>
-        <div class="chatbox__messages">
-            <div></div>
-        </div>
-        <div class="chatbox__footer">
-            <input type="text" placeholder="Write your message...">
-            <button class="chatbox__send--footer send__button">Send</button>
-        </div>
-    </div>
-    <div class="chatbox__button">
-        <button><img src="" alt="">Idemia</button>
-    </div>
-</div>
 
-<script>
-    $SCRIPT_ROOT = "{{ request.script_root|tojson }}";
-</script>
-<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+        <!-- Button to open the chatbox -->
+        <div class="chatbox__button">
+            <button title="Assistant AI"><img style="width:40px; height:auto; margin-top:5px" src="{{ url_for('static', filename='images/idemia-smart-identity-emblem.png') }}"></button>
+        </div>
+    </section>
+
+    <!-- Defines the root path for scripts -->
+    <script>
+        $SCRIPT_ROOT = "{{ request.script_root|tojson }}";
+    </script>
+    
+    <!-- Link to the JavaScript file that controls the chatbox functionality -->
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>
