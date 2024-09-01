@@ -1,10 +1,10 @@
 # final-project
 
-# AI-Project & Chatbot Rule-Based avec Flask
+# Application web mettant en avant un assistant AI
 
 Ce projet propose une double fonctionnalité :
 1. Un assistant AI développé avec le framework LangChain, capable de réaliser des actions liées à la gestion d'une base de données d'utilisateurs.
-2. Un chatbot simple basé sur des règles, développé avec Flask, capable de répondre à certaines commandes spécifiques via une interface utilisateur.
+2. La création d'une application web développé avec Flask, mettant en connection l'assistant AI dévelopé précedemment et une interface utilisateur.
 
 ## Prérequis
 
@@ -65,10 +65,8 @@ static/: Dossier contenant les fichiers statiques comme CSS, JavaScript, et imag
 ### Contribution
 Plusieurs fonctions sont encore en développement :
 
-- Update_tool est encore en phase de test.
-  
-- Les prompts des différentes templates, notamment pour update_tool et delete_tool, nécessitent des améliorations.
+- D'autres outils sont à développer (notamment un outil pour mettre à jour les données).
 
-- L'assistant permettant d'extraire les données à mettre à jour est également en cours de développement.
+- Les prompts des différentes templates nécessitent des améliorations pour éviter les erreurs, les hallucinations, et d'autres cas problématiques de la part de l'assistant.
 
 - Des fonctionnalités peuvent encore être ajoutés pour améliorer l'expérience utilisateur (responsivité, changement de langues, etc ..)
