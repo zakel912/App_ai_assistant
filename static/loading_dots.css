@@ -1,0 +1,47 @@
+/* Loadings Dots */
+
+.loading-dots {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 10px;
+    margin-left: 18px;
+    margin-top: 5px;
+    margin-bottom: -10px;
+    border: 2px solid rgb(240, 239, 239);
+    box-shadow: 5px 8px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    z-index: 50;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    background-color: var(--primary);
+    border-radius: 60%;
+    animation: bounce 2s infinite both;
+    animation-delay: 0.2s;
+}
+
+/* Specific delay for the second dot */
+.dot:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+/* Specific delay for the third dot */
+.dot:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Bounce animation definition */
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+}
